@@ -1,0 +1,326 @@
+{
+  "auth": {
+    "providers": [
+      {
+        "bindDN": "",
+        "bindDNPassword": "",
+        "groupAttrGroup": "test10",
+        "groupAttrName": "test9",
+        "groupAttrUser": "test11",
+        "groupFilter": "test8",
+        "groupSearchBaseDN": "test7",
+        "groupSearchScope": "sub",
+        "host": "localhost",
+        "name": "ldap-test",
+        "port": 389,
+        "tls": false,
+        "tlsRootCA": "",
+        "type": "generic",
+        "userAttrFirstName": "test5",
+        "userAttrID": "test3",
+        "userAttrLastName": "test6",
+        "userAttrUsername": "test4",
+        "userFilter": "test2",
+        "userSearchBaseDN": "test",
+        "userSearchScope": "sub",
+        "groupsToRoles": null
+      }
+    ],
+    "oidcProviders": [
+      {
+        "url": "http://localhost",
+        "providerName": "oidc_test",
+        "clientName": "",
+        "clientId": "test",
+        "clientSecret": "testpass",
+        "redirectUri": "https://10.17.10.43/auth/v3/oidc/callback",
+        "groups": [
+          "default_viewers_group"
+        ]
+      },
+      {
+        "url": "http://localhost",
+        "providerName": "oid-test2",
+        "clientName": "",
+        "clientId": "test2",
+        "clientSecret": "test2pass",
+        "redirectUri": "https://10.17.10.43/auth/v3/oidc/callback",
+        "groups": [
+          "default_admins_group"
+        ]
+      }
+    ],
+    "groups": null,
+    "roles": null,
+    "rbac": {
+      "policies": null,
+      "groups": null
+    }
+  },
+  "dm": {
+    "ntp": [
+      "0.pool.ntp.org",
+      "1.pool.ntp.org",
+      "2.pool.ntp.org",
+      "3.pool.ntp.org"
+    ],
+    "dns": [
+      "8.8.8.8",
+      "8.8.4.4"
+    ],
+    "timezone": "UTC",
+    "country": "US",
+    "docker": {
+      "bip": "10.30.50.1/24"
+    },
+    "firewall": {
+      "rules": [
+        {
+          "id": "ed21043f-017e-46ea-83fa-b7f013854e77",
+          "protocol": "tcp",
+          "port": "8899",
+          "policy": "ACCEPT",
+          "iface": "eth0",
+          "desc": "Rules for 8899"
+        }
+      ]
+    }
+  },
+  "opcua": {
+    "users": [],
+    "hierarchy": {
+      "id": "edgedevice",
+      "parent_id": "",
+      "name": "EdgeDevice",
+      "type": "FOLDER",
+      "node_source": "manual",
+      "data": null,
+      "children": null,
+      "path": [
+        "NODE",
+        "edgedevice"
+      ],
+      "worker_node_id": "EdgeDevice",
+      "worker_node_id_mode": "fixed"
+    },
+    "modes": {
+      "Aes128_Sha256_RsaOaep-Sign": false,
+      "Aes128_Sha256_RsaOaep-SignAndEncrypt": false,
+      "Aes256_Sha256_RsaPss-Sign": false,
+      "Aes256_Sha256_RsaPss-SignAndEncrypt": false,
+      "Basic128Rsa15-Sign": false,
+      "Basic128Rsa15-SignAndEncrypt": false,
+      "Basic256-Sign": false,
+      "Basic256-SignAndEncrypt": false,
+      "Basic256Sha256-Sign": false,
+      "Basic256Sha256-SignAndEncrypt": false,
+      "None-None": false
+    },
+    "policies": {},
+    "enabled": false,
+    "certificates": [],
+    "version": {
+      "Version": "",
+      "GitCommit": ""
+    }
+  },
+  "analytics2": {
+    "Processors": [],
+    "Positions": [],
+    "Version": "2.0.14",
+    "Git": "d8bb060166",
+    "Parameters": [
+      {
+        "UniqueName": "key1",
+        "DataType": "STRING",
+        "IsReadWrite": true,
+        "IsPersistent": true,
+        "DBValue": "value1"
+      }
+    ]
+  },
+  "stats": {
+    "timeseries_db": {
+      "source": "internal",
+      "enabled": true
+    },
+    "version": {
+      "Git": "33a036cdbf",
+      "Version": "2.2.2"
+    }
+  },
+  "dtwin": {
+    "version": {
+      "git": "4e4524dedc",
+      "version": "2.7.44"
+    },
+    "instances": [
+      {
+        "id": "753f5d6b-7b7a-4de1-ac12-9178ff87d254",
+        "modelId": "1caff093-0bfe-48e5-ba49-5ac64ea0aef1",
+        "name": "ins1",
+        "topic": "digitaltwins.mike-test.ins1",
+        "interval": 1,
+        "image": "",
+        "dynamicAttributes": [
+          {
+            "id": "29341e47-3a50-4ebd-b125-0fad8ee5f790",
+            "modelId": "00000000-0000-0000-0000-000000000000",
+            "parentId": "a0eb6e7c-1490-4e32-a073-f29d6e2c1bef",
+            "instanceId": "753f5d6b-7b7a-4de1-ac12-9178ff87d254",
+            "topic": "",
+            "name": "dt1",
+            "unit": "",
+            "dataType": "json",
+            "schemaId": "00000000-0000-0000-0000-000000000000",
+            "skipParentKey": true,
+            "topicExpression": "{p1}"
+          },
+          {
+            "id": "c6891cb4-5b42-41dd-969e-9161405ab425",
+            "modelId": "00000000-0000-0000-0000-000000000000",
+            "parentId": "0929fb19-a8fd-40d5-9a8a-30e0bc5cc21a",
+            "instanceId": "753f5d6b-7b7a-4de1-ac12-9178ff87d254",
+            "topic": "",
+            "name": "dt2",
+            "unit": "",
+            "dataType": "string",
+            "schemaId": "9e14aa86-177b-457f-8ad4-352f2d0fcf71",
+            "skipParentKey": false,
+            "topicExpression": ""
+          }
+        ],
+        "staticAttributes": [
+          {
+            "id": "ace203db-db66-426e-8910-b05c7ac88d8d",
+            "parentId": "35901fec-1b95-486d-83f0-7dcc651ece29",
+            "modelId": "00000000-0000-0000-0000-000000000000",
+            "instanceId": "753f5d6b-7b7a-4de1-ac12-9178ff87d254",
+            "key": "Device Description",
+            "value": "123",
+            "type": 0
+          }
+        ],
+        "transformationBackup": [
+          {
+            "ID": "9e14aa86-177b-457f-8ad4-352f2d0fcf71",
+            "ModelID": "00000000-0000-0000-0000-000000000000",
+            "InstanceID": "753f5d6b-7b7a-4de1-ac12-9178ff87d254",
+            "Name": "tr1",
+            "Schema": "{\"a\": \"$EDGE_DT_SYSTEM_TIME\"}",
+            "SchemaType": "json"
+          }
+        ],
+        "parameters": [
+          {
+            "id": "e3cb1bcf-5538-4d7a-a546-cd0bafec1d4d",
+            "ownerId": "753f5d6b-7b7a-4de1-ac12-9178ff87d254",
+            "ownerType": 1,
+            "name": "p1",
+            "value": "some_value"
+          }
+        ],
+        "flatten": false,
+        "isEnabled": true,
+        "publishAttributes": false
+      }
+    ],
+    "models": [
+      {
+        "id": "1caff093-0bfe-48e5-ba49-5ac64ea0aef1",
+        "assets": "ASSET",
+        "name": "mike-test",
+        "description": "Some desc",
+        "image": "",
+        "dynamicAttributes": [
+          {
+            "id": "0929fb19-a8fd-40d5-9a8a-30e0bc5cc21a",
+            "modelId": "1caff093-0bfe-48e5-ba49-5ac64ea0aef1",
+            "parentId": "00000000-0000-0000-0000-000000000000",
+            "instanceId": null,
+            "topic": "",
+            "name": "dt2",
+            "unit": "",
+            "dataType": "string",
+            "schemaId": "05a4a53d-01fd-43dd-8a34-f0d45195abd1",
+            "skipParentKey": false,
+            "topicExpression": ""
+          },
+          {
+            "id": "a0eb6e7c-1490-4e32-a073-f29d6e2c1bef",
+            "modelId": "1caff093-0bfe-48e5-ba49-5ac64ea0aef1",
+            "parentId": "00000000-0000-0000-0000-000000000000",
+            "instanceId": null,
+            "topic": "",
+            "name": "dt1",
+            "unit": "",
+            "dataType": "json",
+            "schemaId": null,
+            "skipParentKey": true,
+            "topicExpression": "{p1}"
+          }
+        ],
+        "staticAttributes": [
+          {
+            "id": "35901fec-1b95-486d-83f0-7dcc651ece29",
+            "parentId": "00000000-0000-0000-0000-000000000000",
+            "modelId": "1caff093-0bfe-48e5-ba49-5ac64ea0aef1",
+            "instanceId": null,
+            "key": "Device Description",
+            "value": "123",
+            "type": 0
+          }
+        ],
+        "hierarchyNodes": [
+          {
+            "id": "bc374565-11ca-424c-92a0-8d9b9c2cead2",
+            "modelId": "1caff093-0bfe-48e5-ba49-5ac64ea0aef1",
+            "position": 1,
+            "parentId": null,
+            "name": "dt1",
+            "isFolder": false,
+            "attributeId": "a0eb6e7c-1490-4e32-a073-f29d6e2c1bef",
+            "attributeType": "dynamic",
+            "nodeType": "attribute"
+          },
+          {
+            "id": "e567e4ad-36f5-4700-8038-7de2b728a7c0",
+            "modelId": "1caff093-0bfe-48e5-ba49-5ac64ea0aef1",
+            "position": 0,
+            "parentId": null,
+            "name": "dt2",
+            "isFolder": false,
+            "attributeId": "0929fb19-a8fd-40d5-9a8a-30e0bc5cc21a",
+            "attributeType": "dynamic",
+            "nodeType": "attribute"
+          }
+        ],
+        "transformationBackup": [
+          {
+            "ID": "05a4a53d-01fd-43dd-8a34-f0d45195abd1",
+            "ModelID": "1caff093-0bfe-48e5-ba49-5ac64ea0aef1",
+            "InstanceID": "00000000-0000-0000-0000-000000000000",
+            "Name": "tr1",
+            "Schema": "{\"a\": \"$EDGE_DT_SYSTEM_TIME\"}",
+            "SchemaType": "json"
+          }
+        ],
+        "parameters": [
+          {
+            "id": "648edbec-5c95-461b-8393-caeb48eea2d7",
+            "ownerId": "1caff093-0bfe-48e5-ba49-5ac64ea0aef1",
+            "ownerType": 0,
+            "name": "p1",
+            "value": "some_value"
+          }
+        ],
+        "isUNS": false,
+        "connectorName": "",
+        "version": 0
+      }
+    ]
+  },
+  "sysinfo": {
+    "labels": []
+  }
+}
