@@ -21,7 +21,7 @@
       {
         "Dev": {
           "id": "2531fd58-7924-40e8-b815-b8f275a4a714",
-          "name": "sim1",
+          "name": "sim11",
           "driverId": "5bc98836-cfd4-11e9-bb65-2a2ae2dbcce4",
           "settings": {
             "description": ""
@@ -90,10 +90,10 @@
   "stats": {
     "devices": [
       {
-        "name": "sim1",
+        "name": "sim11",
         "id": "2531fd58-7924-40e8-b815-b8f275a4a714",
-        "retention_hours": 168,
-        "topic": "devicehub.alias.sim1.\u003e"
+        "retention_hours": 720,
+        "topic": "devicehub.alias.sim11.\u003e"
       }
     ],
     "version": {
