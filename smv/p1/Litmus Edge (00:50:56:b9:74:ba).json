@@ -1,0 +1,63 @@
+{
+  "dm": {
+    "ntp": [
+      "0.pool.ntp.org",
+      "1.pool.ntp.org",
+      "2.pool.ntp.org",
+      "3.pool.ntp.org"
+    ],
+    "dns": [
+      "8.8.8.8",
+      "8.8.4.4"
+    ],
+    "timezone": "UTC",
+    "country": "US",
+    "docker": {
+      "bip": "10.30.50.1/24"
+    }
+  },
+  "opcua": {
+    "users": [],
+    "hierarchy": {
+      "id": "edgedevice",
+      "parent_id": "",
+      "name": "EdgeDevice",
+      "type": "FOLDER",
+      "node_source": "manual",
+      "data": null,
+      "children": null,
+      "path": [
+        "NODE",
+        "edgedevice"
+      ],
+      "worker_node_id": "EdgeDevice",
+      "worker_node_id_mode": "fixed"
+    },
+    "modes": {
+      "Aes128_Sha256_RsaOaep-Sign": false,
+      "Aes128_Sha256_RsaOaep-SignAndEncrypt": false,
+      "Aes256_Sha256_RsaPss-Sign": false,
+      "Aes256_Sha256_RsaPss-SignAndEncrypt": false,
+      "Basic128Rsa15-Sign": false,
+      "Basic128Rsa15-SignAndEncrypt": false,
+      "Basic256-Sign": false,
+      "Basic256-SignAndEncrypt": false,
+      "Basic256Sha256-Sign": false,
+      "Basic256Sha256-SignAndEncrypt": false,
+      "None-None": false
+    },
+    "policies": {},
+    "enabled": false,
+    "certificates": [],
+    "version": {
+      "Version": "",
+      "GitCommit": ""
+    }
+  },
+  "analytics2": {
+    "Processors": [],
+    "Positions": [],
+    "Version": "1.22.6",
+    "Git": "df62bfe23a"
+  }
+}
