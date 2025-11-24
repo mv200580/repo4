@@ -31,31 +31,6 @@
       }
     }
   ],
-  "cc": {
-    "version": {
-      "git": "c76639bfcd",
-      "version": "3.1.67"
-    },
-    "instances": [
-      {
-        "id": "760f4fb7-3282-48d0-90ef-68ae6593174e",
-        "providerId": "nats-gen-2",
-        "config": "{\"enableTLS\":false,\"hostname\":\"localhost\",\"workersCount\":100,\"insecureSkipVerify\":false,\"reconnectWait\":2,\"connectTimeoutSeconds\":2,\"maxReconnect\":5,\"port\":4222,\"topic\":\"topic1\",\"name\":\"nats2\",\"persistentStorage\":true,\"plSizeLimitGB\":1,\"throttlingLimit\":0,\"queueMode\":\"lifo\"}\n",
-        "topics": [
-          {
-            "id": "bf7bb6d7-b27f-4d84-9676-80c7846b99a6",
-            "enabled": true,
-            "isLocalToRemote": true,
-            "localName": "integration.raw.mqtt_em",
-            "remoteName": "topic1",
-            "config": "{}"
-          }
-        ],
-        "isSystem": false,
-        "enabled": true
-      }
-    ]
-  },
   "opcua": {
     "users": [],
     "hierarchy": {
