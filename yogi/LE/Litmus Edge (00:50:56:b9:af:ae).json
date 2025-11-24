@@ -21,8 +21,7 @@
       "flow_config": {
         "id": 1,
         "memory_limit": 256,
-        "name": "flow-1",
-        "state": 1
+        "name": "flow-1"
       },
       "flow_file": "[\n    {\n        \"id\": \"218aa9ac3e6a4a84\",\n        \"type\": \"tab\",\n        \"label\": \"Flow 1\",\n        \"disabled\": false,\n        \"info\": \"\",\n        \"env\": []\n    },\n    {\n        \"id\": \"20f89043113693fe\",\n        \"type\": \"Datahub Connect\",\n        \"ipadd\": \"127.0.0.1\",\n        \"port\": \"4222\"\n    },\n    {\n        \"id\": \"2185d0ab943130a7\",\n        \"type\": \"Datahub Subscribe\",\n        \"z\": \"218aa9ac3e6a4a84\",\n        \"name\": \"\",\n        \"natc\": \"20f89043113693fe\",\n        \"topicname\": \"integration.raw.mqtt_em\",\n        \"x\": 360,\n        \"y\": 260,\n        \"wires\": [\n            [\n                \"992d487d8fd8fa7d\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"992d487d8fd8fa7d\",\n        \"type\": \"debug\",\n        \"z\": \"218aa9ac3e6a4a84\",\n        \"name\": \"debug 1\",\n        \"active\": true,\n        \"tosidebar\": true,\n        \"console\": false,\n        \"tostatus\": false,\n        \"complete\": \"false\",\n        \"statusVal\": \"\",\n        \"statusType\": \"auto\",\n        \"x\": 460,\n        \"y\": 340,\n        \"wires\": []\n    }\n]",
       "flow_heartbeat_monitor": {
@@ -38,7 +37,7 @@
       "parent_id": "",
       "name": "EdgeDevice",
       "type": "FOLDER",
-      "node_source": "manual",
+      "node_source": "import",
       "data": null,
       "children": null,
       "path": [
