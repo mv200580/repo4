@@ -1,0 +1,116 @@
+{
+  "dm": {
+    "ntp": [
+      "0.pool.ntp.org",
+      "1.pool.ntp.org",
+      "2.pool.ntp.org",
+      "3.pool.ntp.org"
+    ],
+    "dns": [
+      "8.8.8.8",
+      "8.8.4.4"
+    ],
+    "timezone": "UTC",
+    "country": "US",
+    "docker": {
+      "bip": "10.30.50.1/24"
+    }
+  },
+  "flows_manager": [
+    {
+      "flow_config": {
+        "id": 1,
+        "memory_limit": 256,
+        "name": "flow-1",
+        "state": 1
+      },
+      "flow_file": "[\n    {\n        \"id\": \"218aa9ac3e6a4a84\",\n        \"type\": \"tab\",\n        \"label\": \"Flow 1\",\n        \"disabled\": false,\n        \"info\": \"\",\n        \"env\": []\n    },\n    {\n        \"id\": \"20f89043113693fe\",\n        \"type\": \"Datahub Connect\",\n        \"ipadd\": \"127.0.0.1\",\n        \"port\": \"4222\"\n    },\n    {\n        \"id\": \"2185d0ab943130a7\",\n        \"type\": \"Datahub Subscribe\",\n        \"z\": \"218aa9ac3e6a4a84\",\n        \"name\": \"\",\n        \"natc\": \"20f89043113693fe\",\n        \"topicname\": \"integration.raw.mqtt_em\",\n        \"x\": 360,\n        \"y\": 260,\n        \"wires\": [\n            [\n                \"992d487d8fd8fa7d\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"992d487d8fd8fa7d\",\n        \"type\": \"debug\",\n        \"z\": \"218aa9ac3e6a4a84\",\n        \"name\": \"debug 1\",\n        \"active\": true,\n        \"tosidebar\": true,\n        \"console\": false,\n        \"tostatus\": false,\n        \"complete\": \"false\",\n        \"statusVal\": \"\",\n        \"statusType\": \"auto\",\n        \"x\": 460,\n        \"y\": 340,\n        \"wires\": []\n    }\n]",
+      "flow_heartbeat_monitor": {
+        "id": 1,
+        "heartbeat_loss_tolerance": 5
+      }
+    }
+  ],
+  "cc": {
+    "version": {
+      "git": "c76639bfcd",
+      "version": "3.1.67"
+    },
+    "instances": [
+      {
+        "id": "760f4fb7-3282-48d0-90ef-68ae6593174e",
+        "providerId": "nats-gen-2",
+        "config": "{\"enableTLS\":false,\"hostname\":\"localhost\",\"workersCount\":100,\"insecureSkipVerify\":false,\"reconnectWait\":2,\"connectTimeoutSeconds\":2,\"maxReconnect\":5,\"port\":4222,\"topic\":\"topic1\",\"name\":\"nats2\",\"persistentStorage\":true,\"plSizeLimitGB\":1,\"throttlingLimit\":0,\"queueMode\":\"lifo\"}\n",
+        "topics": [
+          {
+            "id": "bf7bb6d7-b27f-4d84-9676-80c7846b99a6",
+            "enabled": true,
+            "isLocalToRemote": true,
+            "localName": "integration.raw.mqtt_em",
+            "remoteName": "topic1",
+            "config": "{}"
+          }
+        ],
+        "isSystem": false,
+        "enabled": true
+      }
+    ]
+  },
+  "opcua": {
+    "users": [],
+    "hierarchy": {
+      "id": "edgedevice",
+      "parent_id": "",
+      "name": "EdgeDevice",
+      "type": "FOLDER",
+      "node_source": "manual",
+      "data": null,
+      "children": null,
+      "path": [
+        "NODE",
+        "edgedevice"
+      ],
+      "worker_node_id": "EdgeDevice",
+      "worker_node_id_mode": "fixed"
+    },
+    "modes": {
+      "Aes128_Sha256_RsaOaep-Sign": false,
+      "Aes128_Sha256_RsaOaep-SignAndEncrypt": false,
+      "Aes256_Sha256_RsaPss-Sign": false,
+      "Aes256_Sha256_RsaPss-SignAndEncrypt": false,
+      "Basic128Rsa15-Sign": false,
+      "Basic128Rsa15-SignAndEncrypt": false,
+      "Basic256-Sign": false,
+      "Basic256-SignAndEncrypt": false,
+      "Basic256Sha256-Sign": false,
+      "Basic256Sha256-SignAndEncrypt": false,
+      "None-None": false
+    },
+    "policies": {},
+    "enabled": false,
+    "certificates": [],
+    "version": {
+      "Version": "",
+      "GitCommit": ""
+    }
+  },
+  "analytics2": {
+    "Processors": [],
+    "Positions": [],
+    "Version": "2.0.16",
+    "Git": "f327c8ac08"
+  },
+  "stats": {
+    "timeseries_db": {
+      "source": "internal",
+      "enabled": true
+    },
+    "version": {
+      "Git": "33a036cdbf",
+      "Version": "2.2.2"
+    }
+  },
+  "sysinfo": {
+    "labels": []
+  }
+}
