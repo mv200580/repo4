@@ -16,6 +16,73 @@
       "bip": "10.30.50.1/24"
     }
   },
+  "devicehub": {
+    "Devs": [
+      {
+        "Dev": {
+          "id": "8bb7854f-22fa-4336-8972-2254b3f09dad",
+          "name": "simu",
+          "driverId": "5bc98836-cfd4-11e9-bb65-2a2ae2dbcce4",
+          "settings": {
+            "description": ""
+          },
+          "aliasTopics": true,
+          "debug": false,
+          "stopped": false,
+          "worker_params": {
+            "PublishOnPollingInterval": "false"
+          },
+          "dh_params": {
+            "WatchDog": "false"
+          },
+          "version": "0.0.1"
+        },
+        "Registers": [
+          {
+            "id": "87ab7282-f4b9-4487-b8c7-7cdb2a98e8ee",
+            "deviceId": "8bb7854f-22fa-4336-8972-2254b3f09dad",
+            "value_type": "float64",
+            "name": "S",
+            "tag_name": "tag1",
+            "settings": {
+              "address": "1",
+              "count": "1",
+              "formula": "sin(t/1000) * 2",
+              "max_value": "50",
+              "min_value": "-50",
+              "pollingInterval": "1000"
+            }
+          }
+        ]
+      }
+    ],
+    "Version": "2.25.69",
+    "Git": "4be5567eda"
+  },
+  "cc": {
+    "version": {
+      "git": "c76639bfcd",
+      "version": "3.1.67"
+    },
+    "instances": [
+      {
+        "id": "c677a42a-9faa-428d-8032-fa618166a51e",
+        "providerId": "nats-gen-2",
+        "config": "{\"name\":\"nats2\",\"enableTLS\":false,\"hostname\":\"localhost\",\"maxReconnect\":5,\"insecureSkipVerify\":false,\"topic\":\"t1\",\"port\":4222,\"reconnectWait\":2,\"workersCount\":100,\"connectTimeoutSeconds\":2,\"queueMode\":\"lifo\",\"throttlingLimit\":0,\"persistentStorage\":true,\"plSizeLimitGB\":1}\n",
+        "topics": [
+          {
+            "id": "0882c146-93cc-4a53-808a-deb373728fbe",
+            "enabled": true,
+            "isLocalToRemote": true,
+            "localName": "devicehub.alias.simu.tag1",
+            "remoteName": ""
+          }
+        ],
+        "isSystem": false,
+        "enabled": true
+      }
+    ]
+  },
   "opcua": {
     "users": [],
     "hierarchy": {
@@ -61,6 +128,20 @@
     "Git": "f327c8ac08"
   },
   "stats": {
+    "devices": [
+      {
+        "name": "simu",
+        "id": "8bb7854f-22fa-4336-8972-2254b3f09dad",
+        "retention_hours": 168,
+        "topic": "devicehub.alias.simu.\u003e"
+      }
+    ],
+    "timeseries": [
+      {
+        "id": "8bb7854f-22fa-4336-8972-2254b3f09dad",
+        "name": "simu"
+      }
+    ],
     "timeseries_db": {
       "source": "internal",
       "enabled": true
