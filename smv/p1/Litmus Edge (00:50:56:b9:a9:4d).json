@@ -16,6 +16,61 @@
       "bip": "10.30.50.1/24"
     }
   },
+  "devicehub": {
+    "Devs": [
+      {
+        "Dev": {
+          "id": "35b60ad7-6eb8-4bae-90cd-b7013ebc3836",
+          "name": "sim1",
+          "driverId": "5bc98836-cfd4-11e9-bb65-2a2ae2dbcce4",
+          "settings": {
+            "description": ""
+          },
+          "aliasTopics": true,
+          "debug": false,
+          "stopped": false,
+          "worker_params": {
+            "PublishOnPollingInterval": "false"
+          },
+          "dh_params": {
+            "WatchDog": "false"
+          },
+          "version": "0.0.1"
+        },
+        "Registers": []
+      }
+    ],
+    "Version": "2.25.63",
+    "Git": "f8459a1079"
+  },
+  "flows_manager": [
+    {
+      "flow_config": {
+        "id": 1,
+        "memory_limit": 256,
+        "name": "flow-1",
+        "state": 1
+      },
+      "flow_file": "[\n    {\n        \"id\": \"10dd643d22da810f\",\n        \"type\": \"tab\",\n        \"label\": \"Flow 1\",\n        \"disabled\": false,\n        \"info\": \"\",\n        \"env\": []\n    },\n    {\n        \"id\": \"302db8f56d165e49\",\n        \"type\": \"OS\",\n        \"z\": \"10dd643d22da810f\",\n        \"name\": \"\",\n        \"x\": 360,\n        \"y\": 220,\n        \"wires\": [\n            []\n        ]\n    },\n    {\n        \"id\": \"3679dc48bd7309f1\",\n        \"type\": \"ui_dropdown\",\n        \"z\": \"10dd643d22da810f\",\n        \"name\": \"\",\n        \"label\": \"\",\n        \"tooltip\": \"\",\n        \"place\": \"Select option\",\n        \"order\": 0,\n        \"width\": 0,\n        \"height\": 0,\n        \"passthru\": true,\n        \"multiple\": false,\n        \"options\": [\n            {\n                \"value\": \"\",\n                \"label\": \"\"\n            }\n        ],\n        \"payload\": \"\",\n        \"topic\": \"topic\",\n        \"topicType\": \"msg\",\n        \"className\": \"\",\n        \"x\": 560,\n        \"y\": 240,\n        \"wires\": [\n            []\n        ]\n    }\n]",
+      "flow_heartbeat_monitor": {
+        "id": 1,
+        "heartbeat_loss_tolerance": 5
+      }
+    },
+    {
+      "flow_config": {
+        "id": 2,
+        "memory_limit": 256,
+        "name": "f1",
+        "state": 1
+      },
+      "flow_file": "[\n    {\n        \"id\": \"6634768fedb64f11\",\n        \"type\": \"tab\",\n        \"label\": \"Flow 1\",\n        \"disabled\": false,\n        \"info\": \"\",\n        \"env\": []\n    },\n    {\n        \"id\": \"9d14fa61c26dab06\",\n        \"type\": \"debug\",\n        \"z\": \"6634768fedb64f11\",\n        \"name\": \"debug 1\",\n        \"active\": true,\n        \"tosidebar\": true,\n        \"console\": false,\n        \"tostatus\": false,\n        \"complete\": \"false\",\n        \"statusVal\": \"\",\n        \"statusType\": \"auto\",\n        \"x\": 240,\n        \"y\": 200,\n        \"wires\": []\n    },\n    {\n        \"id\": \"a051c86b03d84657\",\n        \"type\": \"catch\",\n        \"z\": \"6634768fedb64f11\",\n        \"name\": \"\",\n        \"scope\": null,\n        \"uncaught\": false,\n        \"x\": 380,\n        \"y\": 260,\n        \"wires\": [\n            []\n        ]\n    },\n    {\n        \"id\": \"31aaca4442fe298a\",\n        \"type\": \"link out\",\n        \"z\": \"6634768fedb64f11\",\n        \"name\": \"link out 1\",\n        \"mode\": \"link\",\n        \"links\": [],\n        \"x\": 500,\n        \"y\": 360,\n        \"wires\": []\n    }\n]",
+      "flow_heartbeat_monitor": {
+        "id": 2,
+        "heartbeat_loss_tolerance": 5
+      }
+    }
+  ],
   "opcua": {
     "users": [],
     "hierarchy": {
@@ -61,6 +116,20 @@
     "Git": "d8bb060166"
   },
   "stats": {
+    "devices": [
+      {
+        "name": "sim1",
+        "id": "35b60ad7-6eb8-4bae-90cd-b7013ebc3836",
+        "retention_hours": 168,
+        "topic": "devicehub.alias.sim1.\u003e"
+      }
+    ],
+    "timeseries": [
+      {
+        "id": "35b60ad7-6eb8-4bae-90cd-b7013ebc3836",
+        "name": "sim1"
+      }
+    ],
     "timeseries_db": {
       "source": "internal",
       "enabled": true
@@ -71,6 +140,22 @@
     }
   },
   "sysinfo": {
-    "labels": []
+    "labels": [
+      {
+        "id": "4dad7c20-1a49-496e-8b6a-1d86897b0dfe",
+        "key": "label:123",
+        "value": "value:123:123"
+      },
+      {
+        "id": "c4af258f-9e3a-426d-bb42-670a50b53556",
+        "key": "new_label",
+        "value": "value"
+      },
+      {
+        "id": "35eb6b48-74d7-44f0-9788-d64ad6fae33b",
+        "key": "label2",
+        "value": "value2"
+      }
+    ]
   }
 }
