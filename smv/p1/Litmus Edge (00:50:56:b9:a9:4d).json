@@ -142,11 +142,6 @@
   "sysinfo": {
     "labels": [
       {
-        "id": "4dad7c20-1a49-496e-8b6a-1d86897b0dfe",
-        "key": "label:123",
-        "value": "value:123:123"
-      },
-      {
         "id": "c4af258f-9e3a-426d-bb42-670a50b53556",
         "key": "new_label",
         "value": "value"
@@ -155,6 +150,11 @@
         "id": "35eb6b48-74d7-44f0-9788-d64ad6fae33b",
         "key": "label2",
         "value": "value2"
+      },
+      {
+        "id": "4dad7c20-1a49-496e-8b6a-1d86897b0dfe",
+        "key": "label:123",
+        "value": "value:123:123"
       }
     ]
   }
