@@ -1,0 +1,117 @@
+{
+  "dm": {
+    "ntp": [
+      "0.pool.ntp.org",
+      "1.pool.ntp.org",
+      "2.pool.ntp.org",
+      "3.pool.ntp.org"
+    ],
+    "dns": [
+      "8.8.8.8",
+      "8.8.4.4"
+    ],
+    "timezone": "UTC",
+    "country": "US",
+    "docker": {
+      "bip": "10.30.50.1/24"
+    }
+  },
+  "devicehub": {
+    "Devs": [
+      {
+        "Dev": {
+          "id": "64769976-6d5a-4f7d-b275-c7727258291b",
+          "name": "sim1",
+          "driverId": "5bc98836-cfd4-11e9-bb65-2a2ae2dbcce4",
+          "settings": {
+            "description": ""
+          },
+          "aliasTopics": true,
+          "debug": false,
+          "stopped": false,
+          "worker_params": {
+            "PublishOnPollingInterval": "false"
+          },
+          "dh_params": {
+            "WatchDog": "false"
+          },
+          "version": "0.0.1"
+        },
+        "Registers": []
+      }
+    ],
+    "Version": "2.25.50",
+    "Git": "d0371746c3"
+  },
+  "opcua": {
+    "users": [],
+    "hierarchy": {
+      "id": "edgedevice",
+      "parent_id": "",
+      "name": "EdgeDevice",
+      "type": "FOLDER",
+      "node_source": "manual",
+      "data": null,
+      "children": null,
+      "path": [
+        "NODE",
+        "edgedevice"
+      ],
+      "worker_node_id": "EdgeDevice",
+      "worker_node_id_mode": "fixed"
+    },
+    "modes": {
+      "Aes128_Sha256_RsaOaep-Sign": false,
+      "Aes128_Sha256_RsaOaep-SignAndEncrypt": false,
+      "Aes256_Sha256_RsaPss-Sign": false,
+      "Aes256_Sha256_RsaPss-SignAndEncrypt": false,
+      "Basic128Rsa15-Sign": false,
+      "Basic128Rsa15-SignAndEncrypt": false,
+      "Basic256-Sign": false,
+      "Basic256-SignAndEncrypt": false,
+      "Basic256Sha256-Sign": false,
+      "Basic256Sha256-SignAndEncrypt": false,
+      "None-None": false
+    },
+    "policies": {},
+    "enabled": false,
+    "certificates": [],
+    "version": {
+      "Version": "",
+      "GitCommit": ""
+    }
+  },
+  "analytics2": {
+    "Processors": [],
+    "Positions": [],
+    "Version": "1.25.8",
+    "Git": "ca1223e488"
+  },
+  "stats": {
+    "devices": [
+      {
+        "name": "sim1",
+        "id": "64769976-6d5a-4f7d-b275-c7727258291b",
+        "retention_hours": 168,
+        "topic": "devicehub.alias.sim1.\u003e"
+      }
+    ],
+    "timeseries": [
+      {
+        "id": "64769976-6d5a-4f7d-b275-c7727258291b",
+        "name": "sim1"
+      }
+    ],
+    "timeseries_db": {
+      "source": "internal",
+      "enabled": true
+    },
+    "version": {
+      "Git": "33a036cdbf",
+      "Version": "2.2.2"
+    }
+  },
+  "sysinfo": {
+    "labels": []
+  }
+}
